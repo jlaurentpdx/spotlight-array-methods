@@ -34,4 +34,8 @@ export const filterAu = (countries) => {
 // OUTPUT: an array of all the sneakers brands
 // REQS: use .reduce
 
-export const getSneaks = (brands) => {};
+export const getSneaks = (brands) => {
+  return brands.reduce((array, brands) => {
+    return array.concat(brands.shoes);
+  }, []);
+};
